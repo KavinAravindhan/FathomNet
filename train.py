@@ -56,9 +56,9 @@ def main():
                                 name2idx, use_roi=True, split="val")
 
     train_loader = DataLoader(train_ds, BATCH, shuffle=True,
-                          num_workers=2, pin_memory=False)
+                          num_workers=2, pin_memory=False, drop_last=True)
     val_loader   = DataLoader(val_ds,   BATCH, shuffle=False,
-                          num_workers=2, pin_memory=False)
+                          num_workers=2, pin_memory=False, drop_last=False)
     
     # ------------------------------------------------------------------ #
     #  MixUp / CutMix handler                                            #
@@ -101,7 +101,7 @@ def main():
             coarse_mix = coarse_mix * labels_mix.sum(dim=1, keepdim=True)  # preserve λ
 
             optimizer.zero_grad()
-            with torch.autocast(device_type="cuda", dtype=torch.float16):
+            with torch.autocast(device_type=DEVICE.type, dtype=torch.float16):
                 out = model(imgs)
                 loss_fine   = (-labels_mix * F.log_softmax(out["fine"], dim=1)).sum(dim=1).mean()
                 loss_coarse = (-coarse_mix * F.log_softmax(out["coarse"], dim=1)).sum(dim=1).mean()
@@ -116,7 +116,7 @@ def main():
 
         # ---- validation ---------------------------------------------------------
         model.eval(); correct=0; tot=0; dist_sum=0
-        with torch.no_grad(), torch.autocast(device_type="cuda", dtype=torch.float16):
+        with torch.no_grad(), torch.autocast(device_type=DEVICE.type, dtype=torch.float16):
             for imgs, labels in val_loader:
                 imgs, labels = imgs.to(DEVICE), labels.to(DEVICE)
                 logits = model(imgs)["fine"]

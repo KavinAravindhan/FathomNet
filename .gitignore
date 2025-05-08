@@ -175,5 +175,12 @@ cython_debug/
 
 
 # Added to Ignore by Kavin
+*.pt
+*.ckpt
+*.pth
 /fgvc-comp-2025/data
-# /model_checkpoints
+/model_checkpoints
+
+# pip install -r requirements.txt
+# python download.py datasets/dataset_train.json data/train   -n 8
+# python download.py datasets/dataset_test.json  data/test    -n 8
