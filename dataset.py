@@ -3,6 +3,7 @@ import pathlib, pandas as pd, torch
 from torch.utils.data import Dataset
 from PIL import Image
 from torchvision import transforms as T
+from timm.data import create_transform
 
 # --------------------------------------------------------------------------- #
 #  Helpers                                                                    #
@@ -14,26 +15,43 @@ def build_label_maps(df):
     name_to_idx = {c: i for i, c in enumerate(classes)}
     return name_to_idx, classes                 # idx_to_name == classes
 
+# --------------------------------------------------------------------------- #
+#  Transforms                                                                 #
+# --------------------------------------------------------------------------- #
 def build_transforms(split="train", input_size=224):
-    """Basic augmentation for a quick baseline; we’ll extend later."""
+    """
+    Stronger Augment:
+      • RandAugment (N=2, M=9)           – timm default
+      • Random Erasing (p=0.25)
+    Validation/test: just Resize + CenterCrop.
+    """
     if split == "train":
-        return T.Compose([
-            T.RandomResizedCrop(input_size, scale=(0.7, 1.0)),
-            T.RandomHorizontalFlip(),
-            T.ToTensor(),
-            T.ConvertImageDtype(torch.float32),
-            T.Normalize(mean=[0.485, 0.456, 0.406],
-                        std =[0.229, 0.224, 0.225]),
-        ])
-    else:                                       # val / test
-        return T.Compose([
-            T.Resize(int(input_size*1.15)),
-            T.CenterCrop(input_size),
-            T.ToTensor(),
-            T.ConvertImageDtype(torch.float32),
-            T.Normalize(mean=[0.485, 0.456, 0.406],
-                        std =[0.229, 0.224, 0.225]),
-        ])
+        return create_transform(
+            input_size=input_size,
+            is_training=True,
+            no_aug=False,          # enable RandAugment
+            scale=(0.7, 1.0),
+            ratio=(0.75, 1.33),
+            hflip=0.5,
+            vflip=0.0,
+            color_jitter=None,
+            auto_augment='rand-m9-mstd0.5-inc1',
+            interpolation='bicubic',
+            mean=(0.485, 0.456, 0.406),
+            std=(0.229, 0.224, 0.225),
+            re_prob=0.25,          # Random Erase prob
+            re_mode='pixel',
+            re_count=1,
+        )
+    else:  # val / test
+        return create_transform(
+            input_size=input_size,
+            is_training=False,
+            interpolation='bicubic',
+            mean=(0.485, 0.456, 0.406),
+            std=(0.229, 0.224, 0.225),
+        )
+
 
 # --------------------------------------------------------------------------- #
 #  Main Dataset                                                               #

@@ -7,6 +7,9 @@ import pandas as pd, pathlib, itertools
 from dataset import FathomNetDataset
 from taxonomy import build_maps
 from model import HierConvNeXt
+from timm.data import Mixup
+import torch.nn.functional as F
+from hier_loss import cached_D, expected_distance
 
 def main():
     ROOT    = pathlib.Path("fgvc-comp-2025")
@@ -24,7 +27,7 @@ def main():
     if torch.backends.mps.is_available():
         DEVICE = torch.device("mps")
     elif torch.cuda.is_available():
-        DEVICE = torch.device("cuda")
+        DEVICE = torch.device("cuda:1")
     else:
         DEVICE = torch.device("cpu")
 
@@ -56,7 +59,17 @@ def main():
                           num_workers=2, pin_memory=False)
     val_loader   = DataLoader(val_ds,   BATCH, shuffle=False,
                           num_workers=2, pin_memory=False)
+    
+    # ------------------------------------------------------------------ #
+    #  MixUp / CutMix handler                                            #
+    # ------------------------------------------------------------------ #
+    mixup_fn = Mixup(
+        mixup_alpha=0.8, cutmix_alpha=1.0, cutmix_minmax=None,
+        prob=1.0, switch_prob=0.5, mode='batch',
+        label_smoothing=0.0, num_classes=79)
 
+    # Distance matrix (constant)  ------------------------------------- #
+    D = cached_D(tuple(idx2name))
 
     # --- model -------------------------------------------------------------------
     model = HierConvNeXt(num_fine=79, num_coarse=num_coarse).to(DEVICE)
@@ -75,16 +88,25 @@ def main():
     # --- training loop -----------------------------------------------------------
     for epoch in range(1, EPOCHS+1):
         model.train(); tot_loss = 0
+
         for imgs, labels in tqdm(train_loader, desc=f"train {epoch}"):
             imgs, labels = imgs.to(DEVICE), labels.to(DEVICE)
-            coarse_lbl = torch.tensor([coarse_of_idx[l] for l in labels],
+
+            # ---------- MixUp / CutMix ------------------------------------
+            imgs, labels_mix = mixup_fn(imgs, labels)
+            # labels_mix is float32 one-hot; convert coarse the same way
+            coarse_lbl = torch.tensor([coarse_of_idx[l.item()] for l in labels],
                                     device=DEVICE)
+            coarse_mix = F.one_hot(coarse_lbl, num_classes=num_coarse).float()
+            coarse_mix = coarse_mix * labels_mix.sum(dim=1, keepdim=True)  # preserve λ
+
             optimizer.zero_grad()
-            with torch.autocast(device_type=DEVICE, dtype=torch.float16):
+            with torch.autocast(device_type="cuda", dtype=torch.float16):
                 out = model(imgs)
-                loss_fine   = criterion(out["fine"],   labels)
-                loss_coarse = criterion(out["coarse"], coarse_lbl)
-                loss = loss_fine + 0.5*loss_coarse
+                loss_fine   = (-labels_mix * F.log_softmax(out["fine"], dim=1)).sum(dim=1).mean()
+                loss_coarse = (-coarse_mix * F.log_softmax(out["coarse"], dim=1)).sum(dim=1).mean()
+                loss_hier   = expected_distance(out["fine"], labels, D)     # uses original labels
+                loss = loss_fine + 0.5*loss_coarse + 0.2*loss_hier
             scaler.scale(loss).backward()
             scaler.step(optimizer)
             scaler.update()
@@ -93,17 +115,30 @@ def main():
         print(f"Epoch {epoch}  train-loss: {tot_loss/len(train_loader.dataset):.4f}")
 
         # ---- validation ---------------------------------------------------------
-        model.eval(); correct=0; tot=0
-        with torch.no_grad(), torch.autocast(device_type=DEVICE, dtype=torch.float16):
+        model.eval(); correct=0; tot=0; dist_sum=0
+        with torch.no_grad(), torch.autocast(device_type="cuda", dtype=torch.float16):
             for imgs, labels in val_loader:
                 imgs, labels = imgs.to(DEVICE), labels.to(DEVICE)
                 logits = model(imgs)["fine"]
                 pred = logits.argmax(1)
                 correct += (pred == labels).sum().item()
                 tot     += labels.size(0)
-        print(f" val-acc: {correct/tot:.3%}")
+                dist_sum += expected_distance(logits, labels, D).item() * imgs.size(0)
+
+        val_acc  = correct/tot
+        val_dist = dist_sum/tot
+        print(f" val-acc: {val_acc:.3%}   mean-dist: {val_dist:.3f}")
+
 
         torch.save(model.state_dict(), MODEL_CHECKPOINT/f"ckpt_epoch{epoch}.pt")
+
+        if epoch == 10:
+            train_ds.tfm = build_transforms("train", 384)
+            val_ds.tfm   = build_transforms("val",   384)
+            train_loader  = DataLoader(train_ds, BATCH//2, shuffle=True,  num_workers=2)
+            val_loader    = DataLoader(val_ds,   BATCH//2, shuffle=False, num_workers=2)
+            for g in optimizer.param_groups:
+                g["lr"] *= 0.1
 
 if __name__ == "__main__":
     main()
