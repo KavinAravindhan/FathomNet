@@ -19,7 +19,14 @@ def main():
     EPOCHS  = 20
     LR_HEAD = 1e-4
     LR_BODY = 1e-5
-    DEVICE  = torch.device("mps")   # Apple GPU
+
+    # --- set device -------------------------------------------------------------
+    if torch.backends.mps.is_available():
+        DEVICE = torch.device("mps")
+    elif torch.cuda.is_available():
+        DEVICE = torch.device("cuda")
+    else:
+        DEVICE = torch.device("cpu")
 
     # --- build label maps --------------------------------------------------------
     name2idx, idx2name, coarse_of_idx, coarse_names = build_maps(CSV)
@@ -73,7 +80,7 @@ def main():
             coarse_lbl = torch.tensor([coarse_of_idx[l] for l in labels],
                                     device=DEVICE)
             optimizer.zero_grad()
-            with torch.autocast(device_type='mps', dtype=torch.float16):
+            with torch.autocast(device_type=DEVICE, dtype=torch.float16):
                 out = model(imgs)
                 loss_fine   = criterion(out["fine"],   labels)
                 loss_coarse = criterion(out["coarse"], coarse_lbl)
@@ -87,7 +94,7 @@ def main():
 
         # ---- validation ---------------------------------------------------------
         model.eval(); correct=0; tot=0
-        with torch.no_grad(), torch.autocast(device_type='mps', dtype=torch.float16):
+        with torch.no_grad(), torch.autocast(device_type=DEVICE, dtype=torch.float16):
             for imgs, labels in val_loader:
                 imgs, labels = imgs.to(DEVICE), labels.to(DEVICE)
                 logits = model(imgs)["fine"]
