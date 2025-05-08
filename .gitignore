@@ -172,3 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Added to Ignore by Kavin
+/fgcv-comp-2025/data
