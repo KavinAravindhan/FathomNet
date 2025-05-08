@@ -58,17 +58,35 @@ class FathomNetDataset(Dataset):
         self.name2idx  = name_to_idx
         self.tfm       = build_transforms(split, input_size)
 
-        self.path_col  = "roi_path" if use_roi else "image_path"
-        if self.path_col not in self.df.columns:
-            if use_roi:
-                self.df[self.path_col] = (
+        
+        # ------------------------------------------------------------------ #
+        # Decide which column already stores the image path.                 #
+        # ------------------------------------------------------------------ #
+        if use_roi:
+            if "roi_path" in self.df.columns:
+                self.path_col = "roi_path"
+            elif "path" in self.df.columns:            # fallback (older script)
+                self.path_col = "path"
+            else:
+                # build it from annotation_id
+                assert "annotation_id" in self.df.columns,\
+                       "Need roi_path, path, or annotation_id in CSV"
+                self.df["roi_path"] = (
                     self.root_dir / "rois" /
                     (self.df["annotation_id"].astype(str) + ".png")
                 )
-            else:
-                self.df[self.path_col] = (
+                self.path_col = "roi_path"
+        else:   # full frame
+            if "image_path" in self.df.columns:
+                self.path_col = "image_path"
+            elif "file_name" in self.df.columns:
+                self.df["image_path"] = (
                     self.root_dir / "images" / self.df["file_name"]
                 )
+                self.path_col = "image_path"
+            else:
+                raise ValueError("CSV must contain image_path or file_name")
+
 
     def __len__(self): return len(self.df)
 

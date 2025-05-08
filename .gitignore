@@ -176,3 +176,4 @@ cython_debug/
 
 # Added to Ignore by Kavin
 /fgvc-comp-2025/data
+/model_checkpoints
