@@ -40,9 +40,12 @@ ROOT = pathlib.Path("fgvc-comp-2025")
 TEST_CSV  = ROOT/"data/test/annotations.csv"
 TEST_DIR  = ROOT/"data/test"
 
-df_test = pd.read_csv(TEST_CSV)           # has columns: roi_path, annotation_id
-train_df = pd.read_csv(ROOT/"data/train/annotations.csv")
-name2idx, idx2name = build_maps(train_df)
+df_test = pd.read_csv(TEST_CSV, encoding='utf-8-sig')
+print("Columns:", df_test.columns.tolist())
+
+train_csv = ROOT/"data/train/annotations.csv"
+name2idx, idx2name, _, _ = build_maps(train_csv)
+train_df = pd.read_csv(train_csv)
 
 # --------------------------------------------------------------------------- #
 #  Dataset & Loader (no shuffling)                                            #
@@ -69,7 +72,7 @@ for ckpt_path in args.ckpts:
 # --------------------------------------------------------------------------- #
 all_preds = []
 with torch.no_grad(), torch.autocast(device_type='mps', dtype=torch.float16):
-    for imgs, _ in tqdm(test_loader, desc="predict"):
+    for imgs in tqdm(test_loader, desc="predict"):
         imgs = imgs.to(DEVICE)
         # ensemble average (logits → probs → mean)
         probs = None
@@ -86,10 +89,23 @@ assert len(all_preds) == len(df_test)
 # --------------------------------------------------------------------------- #
 #  Build submission DataFrame                                                 #
 # --------------------------------------------------------------------------- #
+
+# Extract annotation_id from file path
+df_test["annotation_id"] = df_test["path"].apply(lambda p: int(pathlib.Path(p).stem))
+annotation_ids = df_test["annotation_id"].tolist()
+
+# Use test_df with preserved ordering
 sub = pd.DataFrame({
-    "annotation_id": df_test["annotation_id"],
-    "concept_name" : [idx2name[i] for i in all_preds]
+    "annotation_id": df_test["annotation_id"].astype(int),
+    "concept_name": [idx2name[i] for i in all_preds]
 })
+
+assert len(sub) == len(df_test)
+assert list(sub["annotation_id"]) == list(df_test["annotation_id"]), "Mismatch in order!"
+assert "annotation_id" in df_test.columns
+assert df_test["annotation_id"].is_unique
+assert len(annotation_ids) == len(df_test)
+
 
 sub.to_csv(args.out, index=False)
 print(f"Saved Kaggle submission to {args.out}  ({len(sub)} rows)")

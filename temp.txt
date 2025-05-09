@@ -6,5 +6,74 @@ train 2: 100%|██████████| 592/592 [01:59<00:00,  4.97it/s]
 Epoch 2  train-loss: 4.1833
  val-acc: 79.789%   mean-dist: 2.322
 
- Epoch 3  train-loss: 3.7417
+train 3: 100%|██████████| 592/592 [01:59<00:00,  4.94it/s]
+Epoch 3  train-loss: 3.7417
  val-acc: 82.215%   mean-dist: 1.968
+
+train 4: 100%|██████████| 592/592 [01:59<00:00,  4.96it/s]
+Epoch 4  train-loss: 3.5689
+ val-acc: 83.418%   mean-dist: 1.829
+
+train 5: 100%|██████████| 592/592 [01:59<00:00,  4.94it/s]
+Epoch 5  train-loss: 3.4395
+ val-acc: 84.156%   mean-dist: 1.898
+
+train 6: 100%|██████████| 592/592 [01:59<00:00,  4.94it/s]
+Epoch 6  train-loss: 3.2957
+ val-acc: 84.810%   mean-dist: 2.008
+
+train 7: 100%|██████████| 592/592 [01:59<00:00,  4.96it/s]
+Epoch 7  train-loss: 3.1525
+ val-acc: 85.253%   mean-dist: 1.778
+
+train 8: 100%|██████████| 592/592 [01:58<00:00,  5.00it/s]
+Epoch 8  train-loss: 3.1328
+ val-acc: 85.506%   mean-dist: 2.050
+
+train 9: 100%|██████████| 592/592 [01:57<00:00,  5.02it/s]
+Epoch 9  train-loss: 2.9381
+ val-acc: 86.392%   mean-dist: 1.540
+
+train 10: 100%|██████████| 592/592 [01:58<00:00,  5.01it/s]
+Epoch 10  train-loss: 2.9253
+ val-acc: 86.730%   mean-dist: 1.333
+
+train 11: 100%|██████████| 1184/1184 [05:27<00:00,  3.62it/s]
+Epoch 11  train-loss: 3.3420
+ val-acc: 84.177%   mean-dist: 1.768
+
+train 12: 100%|██████████| 1184/1184 [05:27<00:00,  3.62it/s]
+Epoch 12  train-loss: 3.2674
+ val-acc: 84.557%   mean-dist: 1.734
+
+train 13: 100%|██████████| 1184/1184 [05:20<00:00,  3.70it/s]
+Epoch 13  train-loss: 3.2435
+ val-acc: 85.401%   mean-dist: 1.663
+
+train 14: 100%|██████████| 1184/1184 [05:18<00:00,  3.72it/s]
+Epoch 14  train-loss: 3.2462
+ val-acc: 85.717%   mean-dist: 1.673
+
+train 15: 100%|██████████| 1184/1184 [05:22<00:00,  3.67it/s]
+Epoch 15  train-loss: 3.1403
+ val-acc: 85.675%   mean-dist: 1.658
+
+train 16: 100%|██████████| 1184/1184 [05:26<00:00,  3.62it/s]
+Epoch 16  train-loss: 3.1727
+ val-acc: 85.886%   mean-dist: 1.571
+
+train 17: 100%|██████████| 1184/1184 [05:21<00:00,  3.68it/s]
+Epoch 17  train-loss: 3.1150
+ val-acc: 85.886%   mean-dist: 1.521
+
+train 18: 100%|██████████| 1184/1184 [05:17<00:00,  3.73it/s]
+Epoch 18  train-loss: 3.0867
+ val-acc: 85.865%   mean-dist: 1.648
+
+train 19: 100%|██████████| 1184/1184 [05:17<00:00,  3.73it/s]
+Epoch 19  train-loss: 3.0681
+ val-acc: 85.907%   mean-dist: 1.557
+
+train 20: 100%|██████████| 1184/1184 [05:17<00:00,  3.73it/s]
+Epoch 20  train-loss: 3.1546
+ val-acc: 86.076%   mean-dist: 1.736

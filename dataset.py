@@ -112,5 +112,8 @@ class FathomNetDataset(Dataset):
         row = self.df.iloc[idx]
         img = Image.open(row[self.path_col]).convert("RGB")
         img = self.tfm(img)
-        label = self.name2idx[row["label"]]
-        return img, label
+        if "label" in row and pd.notna(row["label"]):
+            label = self.name2idx[row["label"]]
+            return img, label
+        else:
+            return img
