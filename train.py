@@ -90,7 +90,8 @@ for size, batch, n_epochs in PHASES:
 
     for _ in range(n_epochs):
         model.train(); tot_loss = 0
-        for imgs, labels in tqdm(train_loader, leave=False):
+        for imgs, labels in tqdm(train_loader, leave=False, desc=f"phase{size}_e{epoch_global}"):
+
             imgs, labels = imgs.to(DEVICE), labels.to(DEVICE)
 
             imgs, labels_mix = mixup_fn(imgs, labels)
