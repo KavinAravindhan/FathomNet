@@ -93,3 +93,9 @@ sub = pd.DataFrame({
 
 sub.to_csv(args.out, index=False)
 print(f"Saved Kaggle submission to {args.out}  ({len(sub)} rows)")
+
+# python predict.py --ckpts model_checkpoints/ckpt_epoch20.pt --out submission.csv
+
+# python predict.py --ckpts ckpt_fold0_ep15.pt ckpt_fold1_ep15.pt \
+                #   ckpt_fold2_ep15.pt ckpt_fold3_ep15.pt ckpt_fold4_ep15.pt \
+                #   --out submission.csv
