@@ -21,3 +21,17 @@ class HierConvNeXt(nn.Module):
             "fine"   : self.head_fine(feat),
             "coarse" : self.head_coarse(feat)
         }
+
+# ---------- ADD just below HierConvNeXt class ----------
+class HierSwinB(HierConvNeXt):
+    """Swin-V2 Base, ImageNet-22k pretrained"""
+    def __init__(self, num_fine=79, num_coarse=12):
+        super().__init__(num_fine, num_coarse,
+            backbone="swinv2_base_window12to24_192to384.ms_in22k")
+
+class HierViTMAE(HierConvNeXt):
+    """ViT-Base MAE-finetuned checkpoint"""
+    def __init__(self, num_fine=79, num_coarse=12):
+        super().__init__(num_fine, num_coarse,
+            backbone="vit_base_patch16_384.mae")
+
