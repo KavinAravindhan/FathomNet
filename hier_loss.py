@@ -63,7 +63,14 @@ def distance_matrix(tuple_names):
             print("⚠ taxonomy_map.json unreadable – falling back:", e)
     return _matrix_fast(names)
 
+# def expected_distance(logits, target, D):
+#     P  = torch.softmax(logits, 1)                       # [B,79]
+#     Dt = torch.from_numpy(D[target.cpu()]).to(logits)   # [B,79]
+#     return (P * Dt).sum(1).mean()
+
 def expected_distance(logits, target, D):
-    P  = torch.softmax(logits, 1)                       # [B,79]
-    Dt = torch.from_numpy(D[target.cpu()]).to(logits)   # [B,79]
-    return (P * Dt).sum(1).mean()
+    P  = torch.softmax(logits, 1)
+    Dt = torch.from_numpy(D[target.cpu()]).to(logits)
+    # scale to [0,1] so it matches CE magnitude
+    exp = (P * Dt).sum(1) / Dt.max()
+    return exp.mean()

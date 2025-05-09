@@ -9,6 +9,8 @@ from taxonomy  import build_maps
 from model     import HierConvNeXt
 from timm.data import Mixup
 from hier_loss import distance_matrix, expected_distance
+from timm.scheduler import CosineLRScheduler
+from timm.utils import ModelEmaV2
 
 # --------------------------------------------------------------------------- #
 #  Settings                                                                   #
@@ -16,7 +18,7 @@ from hier_loss import distance_matrix, expected_distance
 ROOT  = pathlib.Path("fgvc-comp-2025")
 CSV   = ROOT / "data/train/annotations.csv"
 IMDIR = ROOT / "data/train"
-CKDIR = pathlib.Path("model_checkpoints/using_worm"); CKDIR.mkdir(exist_ok=True)
+CKDIR = pathlib.Path("model_checkpoints/using_ema_schedular"); CKDIR.mkdir(exist_ok=True)
 
 PHASES = [               # (input_res, batch, epochs)
     (224, 32, 10),
@@ -58,10 +60,26 @@ model = HierConvNeXt(num_fine=79, num_coarse=num_coarse).to(DEVICE)
 
 head_params = itertools.chain(model.head_fine.parameters(),
                               model.head_coarse.parameters())
-optimizer = optim.AdamW([
-    {"params": model.backbone.parameters(), "lr": LR_BODY},
-    {"params": head_params,                 "lr": LR_HEAD},
-])
+# optimizer = optim.AdamW([
+#     {"params": model.backbone.parameters(), "lr": LR_BODY},
+#     {"params": head_params,                 "lr": LR_HEAD},
+# ])
+
+# backbone gets lr × 0.25, heads lr × 1.0
+backbone_params = list(model.backbone.parameters())
+opt_groups = [
+    {"params": backbone_params, "lr": LR_BODY, "weight_decay": 0.05},
+    {"params": head_params,     "lr": LR_HEAD, "weight_decay": 0.05},
+]
+optimizer = optim.AdamW(opt_groups, betas=(0.9,0.999))
+
+# scheduler
+sched = CosineLRScheduler(
+    optimizer, t_initial=sum(p[2] for p in PHASES),
+    lr_min=1e-6, warmup_t=3, warmup_lr_init=1e-6)
+
+ema = ModelEmaV2(model, decay=0.9999, device=DEVICE)
+
 scaler = torch.amp.GradScaler(enabled=(DEVICE.type != "cpu"))
 
 mixup_fn = Mixup(
@@ -87,8 +105,16 @@ for size, batch, n_epochs in PHASES:
     if size > 224:                   # shrink LR for higher-res phases
         for g in optimizer.param_groups:
             g["lr"] *= 0.1
+    
+    # freeze backbone 1 epoch each time we upscale
+    torch.set_grad_enabled(True)
+    for p in model.backbone.parameters(): p.requires_grad = False
+    freeze_epochs = 1
 
-    for _ in range(n_epochs):
+    for epoch_idx in range(n_epochs):
+        if epoch_idx == freeze_epochs:
+            for p in model.backbone.parameters(): p.requires_grad = True
+
         model.train(); tot_loss = 0
         for imgs, labels in tqdm(train_loader, leave=False, desc=f"phase{size}_e{epoch_global}"):
 
@@ -127,12 +153,15 @@ for size, batch, n_epochs in PHASES:
         print(f"Epoch {epoch_global:02d}  "
               f"train-loss {tot_loss/len(train_loader.dataset):.4f}  "
               f"val-acc {val_acc:.3%}  mean-dist {val_dist:.3f}")
+        
+        sched.step(epoch_global)
+        ema.update(model)
 
-        torch.save(model.state_dict(),
+        torch.save(ema.module.state_dict(),  # ← updated
                    CKDIR / f"ckpt_s{size}_e{epoch_global}.pt")
         epoch_global += 1
 
 print("\n✓ Training complete – checkpoints stored in", CKDIR)
 
 
-# nohup python train.py > fathomnet_worm.log 2>&1 &
+# nohup python train.py > fathomnet_ema_schedular.log 2>&1 &
