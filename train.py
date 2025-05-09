@@ -136,8 +136,8 @@ def main():
         if epoch == 10:
             train_ds.tfm = build_transforms("train", 384)
             val_ds.tfm   = build_transforms("val",   384)
-            train_loader  = DataLoader(train_ds, BATCH//2, shuffle=True,  num_workers=2)
-            val_loader    = DataLoader(val_ds,   BATCH//2, shuffle=False, num_workers=2)
+            train_loader  = DataLoader(train_ds, BATCH//2, shuffle=True,  num_workers=2, drop_last=True)
+            val_loader    = DataLoader(val_ds,   BATCH//2, shuffle=False, num_workers=2, drop_last=False)
             for g in optimizer.param_groups:
                 g["lr"] *= 0.1
 
