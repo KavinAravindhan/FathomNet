@@ -92,6 +92,8 @@ mixup_fn = Mixup(
 #  Training                                                                   #
 # --------------------------------------------------------------------------- #
 epoch_global = 1
+best_ckpts = []  # List of tuples: (val_acc, ckpt_path)
+
 for size, batch, n_epochs in PHASES:
     print(f"\n### Phase {size}px  {n_epochs} epochs ###")
     train_ds.tfm = build_transforms("train", size)
@@ -157,8 +159,23 @@ for size, batch, n_epochs in PHASES:
         sched.step(epoch_global)
         ema.update(model)
 
-        torch.save(ema.module.state_dict(),  # ← updated
-                   CKDIR / f"ckpt_s{size}_e{epoch_global}.pt")
+        # torch.save(ema.module.state_dict(),  # ← updated
+        #            CKDIR / f"ckpt_s{size}_e{epoch_global}.pt")
+        # epoch_global += 1
+
+        # Save checkpoint
+        ckpt_path = CKDIR / f"ckpt_s{size}_e{epoch_global}.pt"
+        torch.save(ema.module.state_dict(), ckpt_path)
+
+        # Track top-2 checkpoints by validation accuracy
+        best_ckpts.append((val_acc, ckpt_path))
+        best_ckpts = sorted(best_ckpts, key=lambda x: -x[0])[:2]  # Keep top 2
+
+        # Remove others
+        for _, path in best_ckpts[2:]:
+            if path.exists():
+                path.unlink()
+
         epoch_global += 1
 
 print("\n✓ Training complete – checkpoints stored in", CKDIR)
