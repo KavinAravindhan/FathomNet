@@ -1,0 +1,3 @@
+submission_ema_scheduler_85_949.csv - 8.54
+submission_ema_scheduler_86_245.csv - 8.55
+submission_hier_loss_86_076.csv - 3.43
