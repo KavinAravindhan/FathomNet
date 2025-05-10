@@ -1,71 +1,78 @@
-phase224_e1: 100%|██████████| 592/592 [01:57<00:00,  5.06it/s]
-Epoch 01  train-loss 6.7585  val-acc 71.224%  mean-dist 3.482
+phase224_e1: 100%|█████████▉| 591/592 [00:39<00:00, 15.00it/s]                                  
+Epoch 01  train-loss 6.8581  val-acc 1.139%  mean-dist 0.986
 
-phase224_e2: 100%|██████████| 592/592 [01:57<00:00,  4.88it/s]                                                              
-Epoch 02  train-loss 4.9761  val-acc 80.084%  mean-dist 2.404
+phase224_e2: 100%|██████████| 592/592 [01:58<00:00,  5.02it/s] 
+Epoch 02  train-loss 6.3318  val-acc 49.536%  mean-dist 0.931
 
-phase224_e3: 100%|██████████| 592/592 [01:57<00:00,  5.07it/s]                                                              
-Epoch 03  train-loss 4.5885  val-acc 81.793%  mean-dist 2.321
+phase224_e3: 100%|██████████| 592/592 [01:58<00:00,  5.02it/s] 
+Epoch 03  train-loss 4.7296  val-acc 73.671%  mean-dist 0.605
 
-phase224_e4: 100%|██████████| 592/592 [01:57<00:00,  5.06it/s]                                                              
-Epoch 04  train-loss 4.3660  val-acc 83.481%  mean-dist 2.008
+phase224_e4: 100%|██████████| 592/592 [01:58<00:00,  5.03it/s]                                              
+Epoch 04  train-loss 3.9055  val-acc 80.000%  mean-dist 0.458
 
-phase224_e5: 100%|██████████| 592/592 [01:57<00:00,  5.05it/s]                                                             
-Epoch 05  train-loss 4.2059  val-acc 84.093%  mean-dist 1.972
+phase224_e5: 100%|██████████| 592/592 [01:57<00:00,  5.05it/s]                             
+Epoch 05  train-loss 3.6078  val-acc 81.983%  mean-dist 0.435
 
-phase224_e6: 100%|██████████| 592/592 [01:57<00:00,  5.00it/s]                                                              
-Epoch 06  train-loss 4.1467  val-acc 85.274%  mean-dist 2.093
+phase224_e6: 100%|██████████| 592/592 [01:58<00:00,  4.97it/s] 
+Epoch 06  train-loss 3.4482  val-acc 83.291%  mean-dist 0.429
 
-phase224_e7: 100%|██████████| 592/592 [01:59<00:00,  4.97it/s]                                                              
-Epoch 07  train-loss 4.0543  val-acc 85.591%  mean-dist 2.000
+phase224_e7: 100%|██████████| 592/592 [01:57<00:00,  5.02it/s] 
+Epoch 07  train-loss 3.3433  val-acc 84.198%  mean-dist 0.412
 
-phase224_e8: 100%|██████████| 592/592 [01:59<00:00,  5.03it/s]                                                              
-Epoch 08  train-loss 3.9690  val-acc 85.907%  mean-dist 1.963
+phase224_e8: 100%|██████████| 592/592 [01:57<00:00,  5.03it/s]                  
+Epoch 08  train-loss 3.2614  val-acc 84.367%  mean-dist 0.401
 
-phase224_e9: 100%|██████████| 592/592 [01:59<00:00,  4.99it/s]                                                              
+phase224_e9: 100%|██████████| 592/592 [01:57<00:00,  5.04it/s] 
+Epoch 09  train-loss 3.1804  val-acc 84.768%  mean-dist 0.418
+
+phase224_e10: 100%|██████████| 592/592 [01:57<00:00,  5.02it/s]  
+Epoch 10  train-loss 3.1339  val-acc 85.127%  mean-dist 0.426
+
+phase384_e11: 100%|█████████▉| 1183/1184 [01:47<00:00, 11.04it/s]    
+Epoch 11  train-loss 3.7933  val-acc 75.485%  mean-dist 0.627
+
+phase384_e12: 100%|██████████| 1184/1184 [05:18<00:00,  3.72it/s]    
+Epoch 12  train-loss 3.3638  val-acc 84.135%  mean-dist 0.383
+
+phase384_e13: 100%|██████████| 1184/1184 [05:18<00:00,  3.72it/s]    
+Epoch 13  train-loss 3.2306  val-acc 84.430%  mean-dist 0.384
+
+phase384_e14: 100%|██████████| 1184/1184 [05:19<00:00,  3.72it/s]    
+Epoch 14  train-loss 3.1985  val-acc 85.105%  mean-dist 0.391
+
+phase384_e15: 100%|██████████| 1184/1184 [05:18<00:00,  3.73it/s]    
+Epoch 15  train-loss 3.1389  val-acc 85.316%  mean-dist 0.389
+
+phase384_e16: 100%|██████████| 1184/1184 [05:18<00:00,  3.72it/s] 
+Epoch 16  train-loss 3.0986  val-acc 85.190%  mean-dist 0.384
+
+phase384_e17: 100%|██████████| 1184/1184 [05:18<00:00,  3.72it/s]    
+Epoch 17  train-loss 3.0741  val-acc 86.160%  mean-dist 0.379
+
+phase384_e18: 100%|██████████| 1184/1184 [05:18<00:00,  3.72it/s] 
+Epoch 18  train-loss 3.0228  val-acc 86.245%  mean-dist 0.352
+
+phase512_e19: 100%|██████████| 2369/2369 [03:15<00:00, 12.19it/s]    
+Epoch 19  train-loss 3.2997  val-acc 82.848%  mean-dist 0.457
+
+phase512_e20: 100%|██████████| 2369/2369 [09:39<00:00,  4.07it/s]  
+Epoch 20  train-loss 3.1990  val-acc 84.662%  mean-dist 0.407
+
+phase512_e21: 100%|██████████| 2369/2369 [09:39<00:00,  4.11it/s]    
+Epoch 21  train-loss 3.1698  val-acc 85.000%  mean-dist 0.374
+
+phase512_e22: 100%|██████████| 2369/2369 [09:39<00:00,  4.10it/s]    
+Epoch 22  train-loss 3.1505  val-acc 85.464%  mean-dist 0.383
+
+phase512_e23: 100%|██████████| 2369/2369 [09:39<00:00,  4.08it/s]    
+Epoch 23  train-loss 3.1328  val-acc 85.570%  mean-dist 0.389
+
+phase512_e24: 100%|██████████| 2369/2369 [09:39<00:00,  4.09it/s]   
+Epoch 24  train-loss 3.1119  val-acc 85.949%  mean-dist 0.376
+
+
+phase224_e9: 100%|██████████| 592/592 [01:59<00:00,  4.99it/s]
 Epoch 09  train-loss 3.8934  val-acc 86.582%  mean-dist 1.719
 
-phase224_e10: 100%|██████████| 592/592 [01:59<00:00,  4.57it/s]  
+phase224_e10: 100%|██████████| 592/592 [01:59<00:00,  4.57it/s]
 Epoch 10  train-loss 3.8368  val-acc 86.519%  mean-dist 1.892
-
-phase384_e11: 100%|██████████| 1184/1184 [05:23<00:00,  3.64it/s]                                                                 
-Epoch 11  train-loss 4.2807  val-acc 84.008%  mean-dist 2.037
-
-phase384_e12: 100%|██████████| 1184/1184 [05:22<00:00,  3.67it/s]                                                                 
-Epoch 12  train-loss 4.1339  val-acc 84.599%  mean-dist 1.928
-
-phase384_e13: 100%|██████████| 1184/1184 [05:22<00:00,  3.68it/s]    
-Epoch 13  train-loss 4.0490  val-acc 84.768%  mean-dist 1.952
-
-phase384_e14: 100%|██████████| 1184/1184 [05:23<00:00,  3.67it/s]    
-Epoch 14  train-loss 4.0315  val-acc 84.620%  mean-dist 1.990
-
-phase384_e15: 100%|██████████| 1184/1184 [05:22<00:00,  3.67it/s]    
-Epoch 15  train-loss 3.9890  val-acc 84.895%  mean-dist 1.887
-
-phase384_e16: 100%|██████████| 1184/1184 [05:23<00:00,  3.67it/s]    
-Epoch 16  train-loss 3.9821  val-acc 85.063%  mean-dist 1.810
-
-phase384_e17: 100%|██████████| 1184/1184 [05:23<00:00,  3.67it/s]    
-Epoch 17  train-loss 3.9746  val-acc 85.190%  mean-dist 1.844
-
-phase384_e18: 100%|██████████| 1184/1184 [05:23<00:00,  3.64it/s]    
-Epoch 18  train-loss 3.9491  val-acc 85.591%  mean-dist 1.865
-
-phase512_e19: 100%|██████████| 2369/2369 [09:42<00:00,  4.08it/s]    
-Epoch 19  train-loss 4.2939  val-acc 83.143%  mean-dist 2.131
-
-phase512_e20: 100%|██████████| 2369/2369 [09:47<00:00,  3.97it/s]    
-Epoch 20  train-loss 4.2488  val-acc 83.376%  mean-dist 2.080
-
-phase512_e21: 100%|██████████| 2369/2369 [09:55<00:00,  3.98it/s]    
-Epoch 21  train-loss 4.2468  val-acc 83.692%  mean-dist 2.058
-
-phase512_e22: 100%|██████████| 2369/2369 [09:57<00:00,  3.95it/s]    
-Epoch 22  train-loss 4.2099  val-acc 83.650%  mean-dist 2.034
-
-phase512_e23: 100%|██████████| 2369/2369 [09:57<00:00,  3.97it/s]    
-Epoch 23  train-loss 4.2211  val-acc 83.903%  mean-dist 2.037
-
-phase512_e24: 100%|██████████| 2369/2369 [09:46<00:00,  4.08it/s]    
-Epoch 24  train-loss 4.1961  val-acc 83.840%  mean-dist 2.031

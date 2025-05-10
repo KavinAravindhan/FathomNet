@@ -88,6 +88,7 @@ submission.to_csv(args.out, index=False)
 print(f"✅ Submission saved to {args.out} with {len(submission)} entries.")
 
 # python predict.py --ckpts model_checkpoints/hier_loss/ckpt_epoch20.pt --out submission.csv
+# python predict.py --ckpts model_checkpoints/using_ema_schedular/ckpt_s384_e18.pt --out submission_ema_scheduler_86_245.csv
 
 # python predict.py \
 #   --ckpts model_checkpoints/ckpt_epoch18.pt model_checkpoints/ckpt_epoch19.pt model_checkpoints/ckpt_epoch20.pt \
