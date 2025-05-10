@@ -69,10 +69,3 @@ Epoch 23  train-loss 3.1328  val-acc 85.570%  mean-dist 0.389
 
 phase512_e24: 100%|██████████| 2369/2369 [09:39<00:00,  4.09it/s]   
 Epoch 24  train-loss 3.1119  val-acc 85.949%  mean-dist 0.376
-
-
-phase224_e9: 100%|██████████| 592/592 [01:59<00:00,  4.99it/s]
-Epoch 09  train-loss 3.8934  val-acc 86.582%  mean-dist 1.719
-
-phase224_e10: 100%|██████████| 592/592 [01:59<00:00,  4.57it/s]
-Epoch 10  train-loss 3.8368  val-acc 86.519%  mean-dist 1.892

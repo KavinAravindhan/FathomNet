@@ -1,0 +1,789 @@
+annotation_id,concept_name
+1,Elpidia
+2,Tunicata
+3,Chionoecetes tanneri
+4,Tunicata
+5,Tunicata
+6,Chionoecetes tanneri
+7,Scotoplanes
+8,Tunicata
+9,Tunicata
+10,Tunicata
+11,Tunicata
+12,Tunicata
+13,Tunicata
+14,Chionoecetes tanneri
+15,Scotoplanes
+16,Elpidia
+17,Tunicata
+18,Tunicata
+19,Pandalus amplus
+20,Microstomus pacificus
+21,Elpidia
+22,Zoantharia
+23,Peniagone
+24,Strongylocentrotus fragilis
+25,Scotoplanes
+26,Scotoplanes globosa
+27,Amphipoda
+28,Isidella tentaculum
+29,Isidella tentaculum
+30,Pandalus amplus
+31,Amphipoda
+32,Actinernus
+33,Actinernus
+34,Mediaster aequalis
+35,Amphipoda
+36,Amphipoda
+37,Isidella tentaculum
+38,Isidella tentaculum
+39,Isidella tentaculum
+40,Isidella tentaculum
+41,Isidella tentaculum
+42,Isidella tentaculum
+43,Isidella tentaculum
+44,Mediaster aequalis
+45,Isidella tentaculum
+46,Pandalus amplus
+47,Isidella tentaculum
+48,Isidella tentaculum
+49,Hippasteria
+50,Isidella tentaculum
+51,Sebastes diploproa
+52,Sebastes diploproa
+53,Zoantharia
+54,Pandalus amplus
+55,Isidella tentaculum
+56,Sebastes diploproa
+57,Sebastes diploproa
+58,Sebastes diploproa
+59,Sebastes diploproa
+60,Isidella tentaculum
+61,Tunicata
+62,Scotoplanes
+63,Tunicata
+64,Tunicata
+65,Heterochone calyx
+66,Peniagone
+67,Elpidia
+68,Isidella tentaculum
+69,Elpidia
+70,Caridea
+71,Isidella tentaculum
+72,Munidopsis
+73,Scotoplanes
+74,Tunicata
+75,Scotoplanes
+76,Amphipoda
+77,Amphipoda
+78,Scotoplanes
+79,Tunicata
+80,Amphipoda
+81,Tunicata
+82,Actinernus
+83,Isidella tentaculum
+84,Isidella tentaculum
+85,Pandalus amplus
+86,Strongylocentrotus fragilis
+87,Pandalus amplus
+88,Amphipoda
+89,Scotoplanes
+90,Pandalus amplus
+91,Strongylocentrotus fragilis
+92,Amphipoda
+93,Amphipoda
+94,Tunicata
+95,Tunicata
+96,Strongylocentrotus fragilis
+97,Scotoplanes
+98,Pandalus amplus
+99,Pandalus amplus
+100,Isidella tentaculum
+101,Isidella tentaculum
+102,Isidella tentaculum
+103,Pyrosoma atlanticum
+104,Sebastes diploproa
+105,Pandalus amplus
+106,Elpidia
+107,Ophiacanthidae
+108,Scotoplanes
+109,Tunicata
+110,Isidella tentaculum
+111,Elpidia
+112,Ophiacanthidae
+113,Isidella tentaculum
+114,Actinopterygii
+115,Tunicata
+116,Sebastes diploproa
+117,Sebastes diploproa
+118,Tunicata
+119,Vesicomyidae
+120,Sebastes diploproa
+121,Amphipoda
+122,Strongylocentrotus fragilis
+123,Elpidia
+124,Elpidia
+125,Acanthascinae
+126,Actinernus
+127,Actinopterygii
+128,Asteroidea
+129,Mycale
+130,Amphipoda
+131,Isidella tentaculum
+132,Benthocodon pedunculata
+133,Isidella tentaculum
+134,Elpidia
+135,Sebastes diploproa
+136,Heterochone calyx
+137,Isidella tentaculum
+138,Tunicata
+139,Heteropolypus ritteri
+140,Isidella tentaculum
+141,Isidella tentaculum
+142,Caridea
+143,Isidella tentaculum
+144,Isidella tentaculum
+145,Chionoecetes tanneri
+146,Actinernus
+147,Actinernus
+148,Amphipoda
+149,Tunicata
+150,Amphipoda
+151,Benthocodon pedunculata
+152,Scotoplanes globosa
+153,Amphipoda
+154,Amphipoda
+155,Asteroidea
+156,Actinernus
+157,Florometra serratissima
+158,Peniagone
+159,Liponema brevicorne
+160,Pandalus amplus
+161,Porifera
+162,Actinernus
+163,Actinernus
+164,Mycale
+165,Strongylocentrotus fragilis
+166,Isidella tentaculum
+167,Isidella tentaculum
+168,Florometra serratissima
+169,Amphipoda
+170,Tunicata
+171,Isidella tentaculum
+172,Amphipoda
+173,Tunicata
+174,Amphipoda
+175,Scotoplanes
+176,Amphipoda
+177,Sebastes diploproa
+178,Elpidia
+179,Hexactinellida
+180,Scotoplanes
+181,Amphipoda
+182,Sebastes diploproa
+183,Scotoplanes
+184,Tunicata
+185,Hexactinellida
+186,Elpidia
+187,Porifera
+188,Liponema brevicorne
+189,Heteropolypus ritteri
+190,Amphipoda
+191,Hexactinellida
+192,Sebastolobus
+193,Isididae
+194,Isidella tentaculum
+195,Peniagone
+196,Asteroidea
+197,Isidella tentaculum
+198,Heteropolypus ritteri
+199,Tunicata
+200,Strongylocentrotus fragilis
+201,Elpidia
+202,Tunicata
+203,Peniagone
+204,Asteroidea
+205,Peniagone
+206,Chionoecetes tanneri
+207,Strongylocentrotus fragilis
+208,Actinernus
+209,Heteropolypus ritteri
+210,Peniagone
+211,Tunicata
+212,Scotoplanes globosa
+213,Elpidia
+214,Strongylocentrotus fragilis
+215,Umbellula
+216,Heterochone calyx
+217,Peniagone
+218,Hippasteria
+219,Isidella tentaculum
+220,Tunicata
+221,Pandalus amplus
+222,Isidella tentaculum
+223,Scotoplanes
+224,Pandalus amplus
+225,Tunicata
+226,Hexactinellida
+227,Hexactinellida
+228,Strongylocentrotus fragilis
+229,Ophiacanthidae
+230,Tunicata
+231,Isidella tentaculum
+232,Sebastes diploproa
+233,Porifera
+234,Tunicata
+235,Actinernus
+236,Elpidia
+237,Pandalus amplus
+238,Actinernus
+239,Tunicata
+240,Isidella tentaculum
+241,Elpidia
+242,Sebastes diploproa
+243,Sebastes diploproa
+244,Sebastes diploproa
+245,Pandalus amplus
+246,Heterochone calyx
+247,Tunicata
+248,Isidella tentaculum
+249,Isidella tentaculum
+250,Asteroidea
+251,Amphipoda
+252,Isidella tentaculum
+253,Benthocodon pedunculata
+254,Chionoecetes tanneri
+255,Zoantharia
+256,Hippasteria
+257,Isidella tentaculum
+258,Mediaster aequalis
+259,Scotoplanes
+260,Strongylocentrotus fragilis
+261,Elpidia
+262,Scotoplanes
+263,Scotoplanes
+264,Scotoplanes
+265,Scotoplanes
+266,Isidella tentaculum
+267,Sebastes diploproa
+268,Tunicata
+269,Isidella tentaculum
+270,Liponema brevicorne
+271,Asteroidea
+272,Sebastes diploproa
+273,Elpidia
+274,Heterochone calyx
+275,Scotoplanes
+276,Scotoplanes
+277,Ophiacanthidae
+278,Isidella tentaculum
+279,Isidella tentaculum
+280,Isidella tentaculum
+281,Munidopsis
+282,Pandalus amplus
+283,Amphipoda
+284,Asbestopluma
+285,Elpidia
+286,Isidella tentaculum
+287,Tunicata
+288,Farrea
+289,Tunicata
+290,Tunicata
+291,Isididae
+292,Elpidia
+293,Actinernus
+294,Peniagone
+295,Munidopsis
+296,Scotoplanes
+297,Apostichopus leukothele
+298,Sebastes diploproa
+299,Tunicata
+300,Isidella tentaculum
+301,Elpidia
+302,Elpidia
+303,Elpidia
+304,Isidella tentaculum
+305,Isidella tentaculum
+306,Elpidia
+307,Strongylocentrotus fragilis
+308,Peniagone
+309,Strongylocentrotus fragilis
+310,Elpidia
+311,Amphipoda
+312,Isidella tentaculum
+313,Scotoplanes
+314,Sebastes diploproa
+315,Scotoplanes
+316,Zoantharia
+317,Amphipoda
+318,Strongylocentrotus fragilis
+319,Merluccius productus
+320,Peniagone
+321,Merluccius productus
+322,Sebastes diploproa
+323,Merluccius productus
+324,Sebastes diploproa
+325,Merluccius productus
+326,Merluccius productus
+327,Zoantharia
+328,Peniagone
+329,Mediaster aequalis
+330,Tunicata
+331,Scotoplanes
+332,Peniagone
+333,Isidella tentaculum
+334,Scotoplanes
+335,Heterochone calyx
+336,Tunicata
+337,Amphipoda
+338,Elpidia
+339,Florometra serratissima
+340,Sebastes diploproa
+341,Asteroidea
+342,Pandalus amplus
+343,Scotoplanes globosa
+344,Ophiacanthidae
+345,Pandalus amplus
+346,Pandalus amplus
+347,Liponema brevicorne
+348,Pandalus amplus
+349,Isidella tentaculum
+350,Tunicata
+351,Isidella tentaculum
+352,Sebastes diploproa
+353,Asteroidea
+354,Heterochone calyx
+355,Heterochone calyx
+356,Caridea
+357,Amphipoda
+358,Amphipoda
+359,Scotoplanes
+360,Elpidia
+361,Elpidia
+362,Isidella tentaculum
+363,Pandalus amplus
+364,Pandalus amplus
+365,Actinernus
+366,Tunicata
+367,Isidella tentaculum
+368,Isosicyonis
+369,Isidella tentaculum
+370,Peniagone
+371,Tunicata
+372,Hippasteria
+373,Scotoplanes
+374,Tunicata
+375,Scotoplanes
+376,Isidella tentaculum
+377,Chionoecetes tanneri
+378,Chionoecetes tanneri
+379,Hexactinellida
+380,Heterochone calyx
+381,Heterochone calyx
+382,Hexactinellida
+383,Isidella tentaculum
+384,Heterochone calyx
+385,Amphipoda
+386,Isidella tentaculum
+387,Strongylocentrotus fragilis
+388,Heterochone calyx
+389,Pandalus platyceros
+390,Tunicata
+391,Amphipoda
+392,Elpidia
+393,Heterochone calyx
+394,Tunicata
+395,Tunicata
+396,Tunicata
+397,Amphipoda
+398,Peniagone
+399,Elpidia
+400,Tunicata
+401,Isidella tentaculum
+402,Isidella tentaculum
+403,Strongylocentrotus fragilis
+404,Tunicata
+405,Liponema brevicorne
+406,Caridea
+407,Scotoplanes
+408,Heterochone calyx
+409,Strongylocentrotus fragilis
+410,Peniagone
+411,Liponema brevicorne
+412,Actinopterygii
+413,Tunicata
+414,Hippasteria
+415,Tunicata
+416,Amphipoda
+417,Strongylocentrotus fragilis
+418,Elpidia
+419,Isidella tentaculum
+420,Tunicata
+421,Scotoplanes globosa
+422,Scotoplanes globosa
+423,Munnopsidae
+424,Elpidia
+425,Tunicata
+426,Amphipoda
+427,Elpidia
+428,Isidella tentaculum
+429,Asteroidea
+430,Florometra serratissima
+431,Asteroidea
+432,Scotoplanes globosa
+433,Sebastes diploproa
+434,Asteroidea
+435,Pandalus amplus
+436,Elpidia
+437,Hexactinellida
+438,Elpidia
+439,Heterochone calyx
+440,Heterochone calyx
+441,Heterochone calyx
+442,Isidella tentaculum
+443,Heterochone calyx
+444,Heterochone calyx
+445,Amphipoda
+446,Isidella tentaculum
+447,Peniagone
+448,Isidella tentaculum
+449,Strongylocentrotus fragilis
+450,Tunicata
+451,Peniagone
+452,Peniagone
+453,Elpidia
+454,Pandalus amplus
+455,Isidella tentaculum
+456,Isidella tentaculum
+457,Tunicata
+458,Hexactinellida
+459,Heterochone calyx
+460,Heterochone calyx
+461,Merluccius productus
+462,Strongylocentrotus fragilis
+463,Peniagone
+464,Pandalus amplus
+465,Pandalus amplus
+466,Isidella tentaculum
+467,Isidella tentaculum
+468,Isidella tentaculum
+469,Mediaster aequalis
+470,Heterochone calyx
+471,Heterochone calyx
+472,Heterochone calyx
+473,Asteroidea
+474,Tunicata
+475,Caridea
+476,Peniagone
+477,Isidella tentaculum
+478,Tunicata
+479,Isidella tentaculum
+480,Isidella tentaculum
+481,Isidella tentaculum
+482,Isidella tentaculum
+483,Isidella tentaculum
+484,Isidella tentaculum
+485,Tunicata
+486,Isidella tentaculum
+487,Isidella tentaculum
+488,Caridea
+489,Elpidia
+490,Actinernus
+491,Actinernus
+492,Strongylocentrotus fragilis
+493,Peniagone
+494,Tunicata
+495,Isidella tentaculum
+496,Elpidia
+497,Elpidia
+498,Pandalus amplus
+499,Amphipoda
+500,Actinernus
+501,Amphipoda
+502,Peniagone
+503,Tunicata
+504,Munidopsis
+505,Tunicata
+506,Tunicata
+507,Microstomus pacificus
+508,Amphipoda
+509,Ophiacanthidae
+510,Psathyrometra fragilis
+511,Peniagone
+512,Pandalus amplus
+513,Amphipoda
+514,Tunicata
+515,Scotoplanes globosa
+516,Isidella tentaculum
+517,Peniagone
+518,Pandalus amplus
+519,Peniagone
+520,Pandalus amplus
+521,Actinernus
+522,Pandalus amplus
+523,Sebastes diploproa
+524,Hexactinellida
+525,Amphipoda
+526,Amphipoda
+527,Heterochone calyx
+528,Tunicata
+529,Tunicata
+530,Tunicata
+531,Tunicata
+532,Amphipoda
+533,Strongylocentrotus fragilis
+534,Isidella tentaculum
+535,Peniagone
+536,Peniagone
+537,Tunicata
+538,Isidella tentaculum
+539,Heterochone calyx
+540,Tunicata
+541,Isidella tentaculum
+542,Tunicata
+543,Pandalus amplus
+544,Porifera
+545,Tunicata
+546,Zoantharia
+547,Zoantharia
+548,Caridea
+549,Amphipoda
+550,Scotoplanes globosa
+551,Asbestopluma
+552,Brisingida
+553,Sebastes diploproa
+554,Sebastes diploproa
+555,Sebastes diploproa
+556,Tunicata
+557,Tunicata
+558,Brisingida
+559,Munnopsidae
+560,Tunicata
+561,Tunicata
+562,Tunicata
+563,Sebastes diploproa
+564,Sebastes diploproa
+565,Sebastes diploproa
+566,Sebastes diploproa
+567,Tunicata
+568,Pandalus amplus
+569,Vesicomyidae
+570,Tunicata
+571,Ceriantharia
+572,Peniagone
+573,Strongylocentrotus fragilis
+574,Isidella tentaculum
+575,Isidella tentaculum
+576,Elpidia
+577,Sebastes diploproa
+578,Scotoplanes globosa
+579,Elpidia
+580,Pandalus amplus
+581,Strongylocentrotus fragilis
+582,Tunicata
+583,Tunicata
+584,Isidella tentaculum
+585,Tunicata
+586,Actinopterygii
+587,Tunicata
+588,Hexactinellida
+589,Isidella tentaculum
+590,Zoantharia
+591,Isidella tentaculum
+592,Scotoplanes globosa
+593,Scotoplanes globosa
+594,Scotoplanes
+595,Amphipoda
+596,Scotoplanes
+597,Sebastes diploproa
+598,Zoantharia
+599,Sebastes diploproa
+600,Tunicata
+601,Tunicata
+602,Tunicata
+603,Tunicata
+604,Scotoplanes globosa
+605,Peniagone
+606,Pandalus amplus
+607,Elpidia
+608,Isidella tentaculum
+609,Tunicata
+610,Tunicata
+611,Tunicata
+612,Scotoplanes
+613,Heterochone calyx
+614,Tunicata
+615,Chionoecetes tanneri
+616,Elpidia
+617,Isidella tentaculum
+618,Chionoecetes tanneri
+619,Tunicata
+620,Chionoecetes tanneri
+621,Scotoplanes
+622,Elpidia
+623,Sebastes diploproa
+624,Sebastes diploproa
+625,Amphipoda
+626,Mediaster aequalis
+627,Isidella tentaculum
+628,Tunicata
+629,Isosicyonis
+630,Paelopatides confundens
+631,Actinernus
+632,Caridea
+633,Amphipoda
+634,Actinernus
+635,Merluccius productus
+636,Scotoplanes globosa
+637,Actinernus
+638,Munidopsis
+639,Heterochone calyx
+640,Pandalus amplus
+641,Munidopsis
+642,Peniagone
+643,Caridea
+644,Microstomus pacificus
+645,Brisingida
+646,Pandalus amplus
+647,Caridea
+648,Hexactinellida
+649,Peniagone
+650,Actinernus
+651,Isidella tentaculum
+652,Elpidia
+653,Isidella tentaculum
+654,Sebastes diploproa
+655,Scotoplanes globosa
+656,Tunicata
+657,Sebastes diploproa
+658,Sebastes diploproa
+659,Heterochone calyx
+660,Heterochone calyx
+661,Sebastes diploproa
+662,Mycale
+663,Heterochone calyx
+664,Sebastes diploproa
+665,Tunicata
+666,Sebastes diploproa
+667,Florometra serratissima
+668,Amphipoda
+669,Peniagone
+670,Strongylocentrotus fragilis
+671,Pandalus amplus
+672,Amphipoda
+673,Amphipoda
+674,Sebastes diploproa
+675,Sebastes diploproa
+676,Psolus squamatus
+677,Scotoplanes
+678,Isidella tentaculum
+679,Elpidia
+680,Elpidia
+681,Sebastes diploproa
+682,Sebastes diploproa
+683,Scotoplanes
+684,Tunicata
+685,Actinopterygii
+686,Scotoplanes
+687,Scotoplanes
+688,Scotoplanes
+689,Scotoplanes
+690,Florometra serratissima
+691,Scotoplanes globosa
+692,Isidella tentaculum
+693,Heterochone calyx
+694,Peniagone
+695,Isidella tentaculum
+696,Munidopsis
+697,Pandalus amplus
+698,Tunicata
+699,Isidella tentaculum
+700,Heterochone calyx
+701,Tunicata
+702,Isidella tentaculum
+703,Isidella tentaculum
+704,Heterochone calyx
+705,Heterochone calyx
+706,Tunicata
+707,Pandalus amplus
+708,Pandalus amplus
+709,Pandalus amplus
+710,Hexactinellida
+711,Sebastes diploproa
+712,Amphipoda
+713,Amphipoda
+714,Actinernus
+715,Actinernus
+716,Isidella tentaculum
+717,Isidella tentaculum
+718,Isidella tentaculum
+719,Sebastes diploproa
+720,Sebastes diploproa
+721,Sebastes diploproa
+722,Sebastes diploproa
+723,Sebastes diploproa
+724,Tunicata
+725,Sebastes diploproa
+726,Scotoplanes
+727,Scotoplanes
+728,Scotoplanes globosa
+729,Heterochone calyx
+730,Sebastes diploproa
+731,Tunicata
+732,Sebastes diploproa
+733,Munidopsis
+734,Tunicata
+735,Tunicata
+736,Munidopsis
+737,Scotoplanes
+738,Tunicata
+739,Heterochone calyx
+740,Isidella tentaculum
+741,Sebastes diploproa
+742,Sebastes diploproa
+743,Sebastes diploproa
+744,Sebastes diploproa
+745,Tunicata
+746,Sebastes diploproa
+747,Isidella tentaculum
+748,Hexactinellida
+749,Peniagone
+750,Amphipoda
+751,Peniagone
+752,Gastropoda
+753,Heterochone calyx
+754,Sebastes diploproa
+755,Sebastes diploproa
+756,Sebastes diploproa
+757,Tunicata
+758,Actinernus
+759,Peniagone
+760,Tunicata
+761,Sebastes diploproa
+762,Amphipoda
+763,Tunicata
+764,Peniagone
+765,Hexactinellida
+766,Actinernus
+767,Zoantharia
+768,Amphipoda
+769,Pandalus amplus
+770,Asteroidea
+771,Tunicata
+772,Florometra serratissima
+773,Sebastes diploproa
+774,Heterochone calyx
+775,Amphipoda
+776,Tunicata
+777,Pandalus amplus
+778,Scotoplanes globosa
+779,Pandalus amplus
+780,Munidopsis
+781,Pandalus amplus
+782,Hexactinellida
+783,Psathyrometra fragilis
+784,Isidella tentaculum
+785,Tunicata
+786,Actinernus
+787,Strongylocentrotus fragilis
+788,Ophiacanthidae
