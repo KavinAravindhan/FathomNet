@@ -1,37 +1,66 @@
+# import torch, torch.nn as nn, timm
+
+# class HierConvNeXt(nn.Module):
+#     def __init__(self,
+#                  num_fine : int = 79,
+#                  num_coarse: int = 12,
+#                  backbone  : str = "convnext_large_in22k"):
+#         super().__init__()
+#         self.backbone = timm.create_model(backbone,
+#                                           pretrained=True,
+#                                           num_classes=0)   # drop classifier
+#         in_feats = self.backbone.num_features
+
+#         self.head_fine    = nn.Linear(in_feats, num_fine)
+#         self.head_coarse  = nn.Linear(in_feats, num_coarse)
+
+#     def forward(self, x):
+#         feat = self.backbone(x)
+#         return {
+#             "fine"   : self.head_fine(feat),
+#             "coarse" : self.head_coarse(feat)
+#         }
+
+# # ---------- ADD just below HierConvNeXt class ----------
+# class HierSwinB(HierConvNeXt):
+#     """Swin-V2 Base, ImageNet-22k pretrained"""
+#     def __init__(self, num_fine=79, num_coarse=12):
+#         super().__init__(num_fine, num_coarse,
+#             backbone="swinv2_base_window12to24_192to384.ms_in22k")
+
+# class HierViTMAE(HierConvNeXt):
+#     """ViT-Base MAE-finetuned checkpoint"""
+#     def __init__(self, num_fine=79, num_coarse=12):
+#         super().__init__(num_fine, num_coarse,
+#             backbone="vit_base_patch16_384.mae")
+
 # fgvc-comp-2025/model.py
-import torch, torch.nn as nn, timm
+import torch.nn as nn, timm, torch
 
-class HierConvNeXt(nn.Module):
-    def __init__(self,
-                 num_fine : int = 79,
-                 num_coarse: int = 12,
-                 backbone  : str = "convnext_large_in22k"):
+class _Base(nn.Module):
+    def __init__(self, backbone_name: str, num_fine: int = 79):
         super().__init__()
-        self.backbone = timm.create_model(backbone,
-                                          pretrained=True,
-                                          num_classes=0)   # drop classifier
-        in_feats = self.backbone.num_features
+        self.backbone = timm.create_model(backbone_name,
+                                          pretrained=True, num_classes=0)
+        self.head = nn.Linear(self.backbone.num_features, num_fine)
 
-        self.head_fine    = nn.Linear(in_feats, num_fine)
-        self.head_coarse  = nn.Linear(in_feats, num_coarse)
-
-    def forward(self, x):
+    def forward(self, x: torch.Tensor):
         feat = self.backbone(x)
-        return {
-            "fine"   : self.head_fine(feat),
-            "coarse" : self.head_coarse(feat)
-        }
+        return {"fine": self.head(feat)}
 
-# ---------- ADD just below HierConvNeXt class ----------
-class HierSwinB(HierConvNeXt):
-    """Swin-V2 Base, ImageNet-22k pretrained"""
-    def __init__(self, num_fine=79, num_coarse=12):
-        super().__init__(num_fine, num_coarse,
-            backbone="swinv2_base_window12to24_192to384.ms_in22k")
+# ------------------------------------------------------------- #
+#  Four backbones you can choose at runtime with --arch         #
+# ------------------------------------------------------------- #
+class HierConvNeXt(_Base):
+    def __init__(self, n=79): super().__init__("convnext_large_in22k", n)
 
-class HierViTMAE(HierConvNeXt):
-    """ViT-Base MAE-finetuned checkpoint"""
-    def __init__(self, num_fine=79, num_coarse=12):
-        super().__init__(num_fine, num_coarse,
-            backbone="vit_base_patch16_384.mae")
+class HierSwinB(_Base):
+    def __init__(self, n=79): super().__init__(
+        "swinv2_base_window12to24_192to384.ms_in22k", n)
+
+class HierViTMAE(_Base):
+    def __init__(self, n=79): super().__init__("vit_base_patch16_384.mae", n)
+
+class HierEffV2M(_Base):
+    def __init__(self, n=79): super().__init__("efficientnetv2_rw_m", n)
 
