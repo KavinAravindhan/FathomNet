@@ -14,7 +14,7 @@ from timm.scheduler import CosineLRScheduler
 # from timm.utils import ModelEmaV2
 
 class EarlyStopper:
-    def __init__(self, patience=10, min_delta=0.0):
+    def __init__(self, patience=2, min_delta=0.0):
         self.patience = patience
         self.min_delta = min_delta
         self.counter = 0
@@ -89,8 +89,8 @@ head_params = itertools.chain(model.head_fine.parameters(),
 # backbone gets lr × 0.25, heads lr × 1.0
 backbone_params = list(model.backbone.parameters())
 opt_groups = [
-    {"params": backbone_params, "lr": LR_BODY, "weight_decay": 0.2},
-    {"params": head_params,     "lr": LR_HEAD, "weight_decay": 0.2},
+    {"params": backbone_params, "lr": LR_BODY, "weight_decay": 0.05},
+    {"params": head_params,     "lr": LR_HEAD, "weight_decay": 0.05},
 ]
 optimizer = optim.AdamW(opt_groups, betas=(0.9,0.999))
 

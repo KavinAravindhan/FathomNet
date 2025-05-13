@@ -45,7 +45,7 @@ test_loader = DataLoader(test_ds, args.batch, shuffle=False, num_workers=0, pin_
 models = []
 for ckpt_path in args.ckpts:
     ckpt = torch.load(ckpt_path, map_location=DEVICE)
-    model = HierCoAtNet()
+    model = HierCoAtNet(num_fine=79, num_coarse=len(set(train_df["label"].str.split().str[0])))
     model.load_state_dict(ckpt)
     model.to(DEVICE)
     model.eval()

@@ -5,39 +5,58 @@ import torch.nn.functional as F
 import numpy as np
 
 class HierarchicalLoss(nn.Module):
-    def __init__(self, coarse_of_idx, gamma=2, num_classes=79):
+    def __init__(self, coarse_of_idx, gamma=2, depth_weights=[0.1, 0.3, 0.5, 0.7]):
         super().__init__()
         self.coarse_of_idx = coarse_of_idx
         self.gamma = gamma
+        self.depth_weights = torch.tensor(depth_weights)
         
-        # Learnable weights
-        self.register_parameter('h_weight', nn.Parameter(torch.tensor(0.3)))
-        self.register_parameter('c_weight', nn.Parameter(torch.tensor(0.2)))
-        
-        # Precomputed mapping (device-safe)
-        self.register_buffer('coarse_mapping', 
-            torch.tensor([coarse_of_idx[i] for i in range(num_classes)], dtype=torch.long)
-        )
-
     def forward(self, logits, targets, D):
-        # Label smoothing
-        loss_fine = F.cross_entropy(logits, targets, label_smoothing=0.2)
+        # Base loss components
+        loss_fine = F.nll_loss(F.log_softmax(logits, 1), targets)
         
-        # Device-safe targets
-        coarse_targets = self.coarse_mapping[targets]
+        # PROPER TENSOR CONVERSION
+        coarse_targets = torch.tensor(
+            [self.coarse_of_idx[t.item()] for t in targets],
+            device=targets.device,
+            dtype=torch.long  # Explicit dtype for integer labels
+        )
         
         # Hierarchical components
-        loss_hier = self.focal_distance(logits, targets, D)
-        loss_consistency = (self.coarse_mapping[logits.argmax(1)] != coarse_targets).float().mean()
+        loss_hier = self.focal_expected_distance(logits, targets, D)
+        loss_consistency = self.hierarchical_consistency(logits, coarse_targets)  # Use tensor here
         
-        return loss_fine + self.h_weight*loss_hier + self.c_weight*loss_consistency
+        # Adaptive weighting
+        h_loss_weight = nn.Parameter(torch.tensor(0.3))
+        consistency_weight = nn.Parameter(torch.tensor(0.2))
+        
+        total_loss = loss_fine + h_loss_weight * loss_hier + consistency_weight * loss_consistency
+        return total_loss
 
-    def focal_distance(self, logits, targets, D):
+    
+    def focal_expected_distance(self, logits, targets, D):
         P = torch.softmax(logits, 1)
-        Dt = torch.from_numpy(D[targets.cpu().numpy()]).to(logits.device).float()
+        Dt = torch.from_numpy(D[targets.cpu()]).to(logits)
+        focal_weights = (1 - Dt) ** self.gamma
+        return (P * Dt * focal_weights).sum(1).mean()
+    
+    # def hierarchical_consistency(self, logits, coarse_labels):
+    #     predicted_coarse = torch.tensor([self.coarse_of_idx[l.item()] for l in logits.argmax(1)], device=logits.device)
+    #     consistency_mask = (predicted_coarse == coarse_labels).float()
+    #     return (1 - consistency_mask).mean()
+    
+    # Added by Kavin
+    def hierarchical_consistency(self, logits, coarse_labels):
+        # Vectorized coarse label mapping
+        fine_preds = logits.argmax(1)
+        coarse_mapping = torch.tensor(
+            [self.coarse_of_idx[i] for i in range(logits.size(1))],
+            device=logits.device
+        )
+        predicted_coarse = coarse_mapping[fine_preds]
         
-        # Stability fixes
-        Dt = (Dt - Dt.min()) / (Dt.max() - Dt.min() + 1e-8)
-        Dt = torch.clamp(Dt, min=1e-4, max=1.0)
-        
-        return (P * Dt * (1 - Dt)**self.gamma).sum(1).mean()
+        # Ensure comparison between tensors
+        consistency_mask = (predicted_coarse == coarse_labels).float()
+        return (1 - consistency_mask).mean()
+
+
