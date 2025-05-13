@@ -1,0 +1,789 @@
+annotation_id,concept_name
+1,Asbestopluma
+2,Asbestopluma
+3,Amphipoda
+4,Amphipoda
+5,Amphipoda
+6,Asbestopluma
+7,Delectopecten
+8,Asbestopluma
+9,Asbestopluma
+10,Asbestopluma
+11,Amphipoda
+12,Asbestopluma
+13,Amphipoda
+14,Terebellidae
+15,Metridium farcimen
+16,Metridium farcimen
+17,Terebellidae
+18,Abyssocucumis abyssorum
+19,Delectopecten
+20,Terebellidae
+21,Metridium farcimen
+22,Keratoisis
+23,Pyrosoma atlanticum
+24,Terebellidae
+25,Delectopecten
+26,Asbestopluma
+27,Terebellidae
+28,Octopus rubescens
+29,Gersemia juliepackardae
+30,Terebellidae
+31,Abyssocucumis abyssorum
+32,Keratoisis
+33,Abyssocucumis abyssorum
+34,Pyrosoma atlanticum
+35,Strongylocentrotus fragilis
+36,Asbestopluma monticola
+37,Actiniaria
+38,Ophiuroidea
+39,Actiniaria
+40,Paragorgia arborea
+41,Actiniaria
+42,Amphipoda
+43,Amphipoda
+44,Actiniaria
+45,Actiniaria
+46,Terebellidae
+47,Metridium farcimen
+48,Terebellidae
+49,Isidella tentaculum
+50,Actiniaria
+51,Heterocarpus
+52,Amphipoda
+53,Asbestopluma monticola
+54,Funiculina
+55,Funiculina
+56,Delectopecten
+57,Delectopecten
+58,Delectopecten
+59,Pyrosoma atlanticum
+60,Ceriantharia
+61,Pyrosoma atlanticum
+62,Metridium farcimen
+63,Asbestopluma
+64,Actiniaria
+65,Psathyrometra fragilis
+66,Gastropoda
+67,Actiniaria
+68,Actiniaria
+69,Terebellidae
+70,Gastropoda
+71,Gastropoda
+72,Gastropoda
+73,Asbestopluma
+74,Amphipoda
+75,Asbestopluma
+76,Funiculina
+77,Microstomus pacificus
+78,Abyssocucumis abyssorum
+79,Amphipoda
+80,Abyssocucumis abyssorum
+81,Delectopecten
+82,Terebellidae
+83,Sebastes
+84,Terebellidae
+85,Delectopecten
+86,Ophiuroidea
+87,Terebellidae
+88,Abyssocucumis abyssorum
+89,Asbestopluma
+90,Delectopecten
+91,Asbestopluma monticola
+92,Metridium farcimen
+93,Sebastes
+94,Ophiuroidea
+95,Abyssocucumis abyssorum
+96,Actiniaria
+97,Lithodidae
+98,Asbestopluma
+99,Abyssocucumis abyssorum
+100,Abyssocucumis abyssorum
+101,Asbestopluma
+102,Terebellidae
+103,Brisingida
+104,Actiniaria
+105,Actiniaria
+106,Actiniaria
+107,Pyrosoma atlanticum
+108,Actiniaria
+109,Actiniaria
+110,Terebellidae
+111,Delectopecten
+112,Delectopecten
+113,Terebellidae
+114,Keratoisis
+115,Asbestopluma
+116,Asbestopluma
+117,Asbestopluma
+118,Terebellidae
+119,Amphipoda
+120,Terebellidae
+121,Terebellidae
+122,Delectopecten
+123,Gastropoda
+124,Metridium farcimen
+125,Keratoisis
+126,Gersemia juliepackardae
+127,Pyrosoma atlanticum
+128,Gastropoda
+129,Paragorgia arborea
+130,Gastropoda
+131,Paragorgia arborea
+132,Gastropoda
+133,Pyrosoma atlanticum
+134,Delectopecten
+135,Asbestopluma
+136,Abyssocucumis abyssorum
+137,Abyssocucumis abyssorum
+138,Abyssocucumis abyssorum
+139,Psathyrometra fragilis
+140,Abyssocucumis abyssorum
+141,Abyssocucumis abyssorum
+142,Abyssocucumis abyssorum
+143,Abyssocucumis abyssorum
+144,Keratoisis
+145,Psathyrometra fragilis
+146,Delectopecten
+147,Microstomus pacificus
+148,Terebellidae
+149,Vesicomyidae
+150,Terebellidae
+151,Hippasteria
+152,Terebellidae
+153,Terebellidae
+154,Delectopecten
+155,Benthocodon pedunculata
+156,Psathyrometra fragilis
+157,Keratoisis
+158,Actiniaria
+159,Metridium farcimen
+160,Pyrosoma atlanticum
+161,Actiniaria
+162,Abyssocucumis abyssorum
+163,Hippasteria
+164,Amphipoda
+165,Hippasteria
+166,Abyssocucumis abyssorum
+167,Ophiuroidea
+168,Actiniaria
+169,Delectopecten
+170,Actiniaria
+171,Amphipoda
+172,Abyssocucumis abyssorum
+173,Abyssocucumis abyssorum
+174,Keratoisis
+175,Paralomis multispina
+176,Paralomis multispina
+177,Delectopecten
+178,Paralomis multispina
+179,Elpidia
+180,Rathbunaster californicus
+181,Corallimorphus pilatus
+182,Gersemia juliepackardae
+183,Asbestopluma
+184,Asbestopluma
+185,Sebastes
+186,Porifera
+187,Funiculina
+188,Actiniaria
+189,Funiculina
+190,Amphipoda
+191,Abyssocucumis abyssorum
+192,Terebellidae
+193,Sebastes
+194,Actiniaria
+195,Abyssocucumis abyssorum
+196,Hippasteria
+197,Paragorgia arborea
+198,Funiculina
+199,Asbestopluma
+200,Abyssocucumis abyssorum
+201,Actiniaria
+202,Paragorgia arborea
+203,Terebellidae
+204,Terebellidae
+205,Amphipoda
+206,Hippasteria
+207,Funiculina
+208,Amphipoda
+209,Actiniaria
+210,Metridium farcimen
+211,Amphipoda
+212,Asbestopluma
+213,Delectopecten
+214,Terebellidae
+215,Heteropolypus ritteri
+216,Asbestopluma
+217,Asbestopluma
+218,Terebellidae
+219,Gastropoda
+220,Actiniaria
+221,Actiniaria
+222,Actiniaria
+223,Metridium farcimen
+224,Corallimorphus pilatus
+225,Amphipoda
+226,Psolus squamatus
+227,Ophiuroidea
+228,Keratoisis
+229,Ophiuroidea
+230,Metridium farcimen
+231,Terebellidae
+232,Terebellidae
+233,Vesicomyidae
+234,Amphipoda
+235,Abyssocucumis abyssorum
+236,Corallimorphus pilatus
+237,Microstomus pacificus
+238,Pandalus platyceros
+239,Abyssocucumis abyssorum
+240,Abyssocucumis abyssorum
+241,Actiniaria
+242,Terebellidae
+243,Amphipoda
+244,Delectopecten
+245,Actiniaria
+246,Actiniaria
+247,Paralomis multispina
+248,Terebellidae
+249,Hippasteria
+250,Microstomus pacificus
+251,Keratoisis
+252,Terebellidae
+253,Terebellidae
+254,Holothuroidea
+255,Actiniaria
+256,Actiniaria
+257,Amphipoda
+258,Terebellidae
+259,Asbestopluma
+260,Asbestopluma
+261,Asbestopluma
+262,Lithodidae
+263,Asbestopluma
+264,Strongylocentrotus fragilis
+265,Vesicomyidae
+266,Pyrosoma atlanticum
+267,Abyssocucumis abyssorum
+268,Asbestopluma
+269,Amphipoda
+270,Amphipoda
+271,Gastropoda
+272,Psolus squamatus
+273,Terebellidae
+274,Abyssocucumis abyssorum
+275,Heteropolypus ritteri
+276,Actiniaria
+277,Abyssocucumis abyssorum
+278,Abyssocucumis abyssorum
+279,Delectopecten
+280,Abyssocucumis abyssorum
+281,Amphipoda
+282,Funiculina
+283,Gastropoda
+284,Actiniaria
+285,Vesicomyidae
+286,Terebellidae
+287,Abyssocucumis abyssorum
+288,Terebellidae
+289,Delectopecten
+290,Abyssocucumis abyssorum
+291,Terebellidae
+292,Amphipoda
+293,Terebellidae
+294,Abyssocucumis abyssorum
+295,Abyssocucumis abyssorum
+296,Delectopecten
+297,Abyssocucumis abyssorum
+298,Paragorgia arborea
+299,Abyssocucumis abyssorum
+300,Gersemia juliepackardae
+301,Abyssocucumis abyssorum
+302,Abyssocucumis abyssorum
+303,Actiniaria
+304,Actiniaria
+305,Paralomis multispina
+306,Vesicomyidae
+307,Terebellidae
+308,Terebellidae
+309,Terebellidae
+310,Acanthascinae
+311,Gastropoda
+312,Paralomis multispina
+313,Abyssocucumis abyssorum
+314,Funiculina
+315,Actiniaria
+316,Actiniaria
+317,Hippasteria
+318,Microstomus pacificus
+319,Delectopecten
+320,Acanthascinae
+321,Terebellidae
+322,Actiniaria
+323,Terebellidae
+324,Acanthascinae
+325,Terebellidae
+326,Delectopecten
+327,Terebellidae
+328,Gastropoda
+329,Funiculina
+330,Amphipoda
+331,Ophiuroidea
+332,Pyrosoma atlanticum
+333,Gastropoda
+334,Gastropoda
+335,Pyrosoma atlanticum
+336,Funiculina
+337,Abyssocucumis abyssorum
+338,Actiniaria
+339,Amphipoda
+340,Delectopecten
+341,Abyssocucumis abyssorum
+342,Abyssocucumis abyssorum
+343,Gastropoda
+344,Terebellidae
+345,Pyrosoma atlanticum
+346,Terebellidae
+347,Delectopecten
+348,Delectopecten
+349,Terebellidae
+350,Abyssocucumis abyssorum
+351,Actiniaria
+352,Keratoisis
+353,Corallimorphus pilatus
+354,Terebellidae
+355,Terebellidae
+356,Abyssocucumis abyssorum
+357,Abyssocucumis abyssorum
+358,Abyssocucumis abyssorum
+359,Actiniaria
+360,Paragorgia arborea
+361,Actiniaria
+362,Abyssocucumis abyssorum
+363,Pyrosoma atlanticum
+364,Delectopecten
+365,Amphipoda
+366,Actiniaria
+367,Terebellidae
+368,Asbestopluma
+369,Actiniaria
+370,Gersemia juliepackardae
+371,Pyrosoma atlanticum
+372,Actiniaria
+373,Abyssocucumis abyssorum
+374,Amphipoda
+375,Vesicomyidae
+376,Actiniaria
+377,Delectopecten
+378,Delectopecten
+379,Amphipoda
+380,Gastropoda
+381,Actiniaria
+382,Amphipoda
+383,Paragorgia arborea
+384,Mycale
+385,Hippasteria
+386,Actiniaria
+387,Delectopecten
+388,Actiniaria
+389,Hippasteria
+390,Pandalus platyceros
+391,Abyssocucumis abyssorum
+392,Abyssocucumis abyssorum
+393,Funiculina
+394,Ophiuroidea
+395,Amphipoda
+396,Asbestopluma
+397,Pyrosoma atlanticum
+398,Asbestopluma monticola
+399,Rathbunaster californicus
+400,Asbestopluma
+401,Mycale
+402,Mycale
+403,Sebastes diploproa
+404,Asbestopluma
+405,Actiniaria
+406,Serpulidae
+407,Abyssocucumis abyssorum
+408,Abyssocucumis abyssorum
+409,Gastropoda
+410,Paragorgia arborea
+411,Corallimorphus pilatus
+412,Pyrosoma atlanticum
+413,Funiculina
+414,Strongylocentrotus fragilis
+415,Acanthascinae
+416,Psathyrometra fragilis
+417,Terebellidae
+418,Terebellidae
+419,Terebellidae
+420,Terebellidae
+421,Paragorgia arborea
+422,Actinopterygii
+423,Psolus squamatus
+424,Asbestopluma
+425,Funiculina
+426,Delectopecten
+427,Delectopecten
+428,Terebellidae
+429,Hippasteria
+430,Delectopecten
+431,Heterochone calyx
+432,Paralomis multispina
+433,Amphipoda
+434,Funiculina
+435,Terebellidae
+436,Amphipoda
+437,Abyssocucumis abyssorum
+438,Actiniaria
+439,Psathyrometra fragilis
+440,Actiniaria
+441,Holothuroidea
+442,Terebellidae
+443,Terebellidae
+444,Actiniaria
+445,Hippasteria
+446,Psolus squamatus
+447,Keratoisis
+448,Gersemia juliepackardae
+449,Psathyrometra fragilis
+450,Delectopecten
+451,Delectopecten
+452,Terebellidae
+453,Gastropoda
+454,Heterocarpus
+455,Abyssocucumis abyssorum
+456,Abyssocucumis abyssorum
+457,Actiniaria
+458,Abyssocucumis abyssorum
+459,Abyssocucumis abyssorum
+460,Paragorgia arborea
+461,Abyssocucumis abyssorum
+462,Terebellidae
+463,Terebellidae
+464,Paragorgia arborea
+465,Corallimorphus pilatus
+466,Gersemia juliepackardae
+467,Funiculina
+468,Pyrosoma atlanticum
+469,Munidopsis
+470,Gastropoda
+471,Abyssocucumis abyssorum
+472,Holothuroidea
+473,Asbestopluma
+474,Asbestopluma
+475,Delectopecten
+476,Amphipoda
+477,Crinoidea
+478,Amphipoda
+479,Serpulidae
+480,Amphipoda
+481,Delectopecten
+482,Amphipoda
+483,Delectopecten
+484,Serpulidae
+485,Funiculina
+486,Delectopecten
+487,Actiniaria
+488,Terebellidae
+489,Abyssocucumis abyssorum
+490,Amphipoda
+491,Hippasteria
+492,Abyssocucumis abyssorum
+493,Delectopecten
+494,Actiniaria
+495,Actiniaria
+496,Delectopecten
+497,Terebellidae
+498,Funiculina
+499,Amphipoda
+500,Metridium farcimen
+501,Actiniaria
+502,Delectopecten
+503,Terebellidae
+504,Hippasteria
+505,Sebastes
+506,Terebellidae
+507,Terebellidae
+508,Terebellidae
+509,Asbestopluma
+510,Actinopterygii
+511,Gastropoda
+512,Funiculina
+513,Actiniaria
+514,Serpulidae
+515,Funiculina
+516,Terebellidae
+517,Actiniaria
+518,Delectopecten
+519,Delectopecten
+520,Abyssocucumis abyssorum
+521,Abyssocucumis abyssorum
+522,Abyssocucumis abyssorum
+523,Abyssocucumis abyssorum
+524,Actiniaria
+525,Hippasteria
+526,Actiniaria
+527,Amphipoda
+528,Peniagone
+529,Terebellidae
+530,Funiculina
+531,Holothuroidea
+532,Actiniaria
+533,Hippasteria
+534,Asbestopluma
+535,Terebellidae
+536,Amphipoda
+537,Asbestopluma
+538,Terebellidae
+539,Gastropoda
+540,Delectopecten
+541,Gersemia juliepackardae
+542,Heteropolypus ritteri
+543,Abyssocucumis abyssorum
+544,Abyssocucumis abyssorum
+545,Asbestopluma monticola
+546,Asbestopluma
+547,Amphipoda
+548,Actiniaria
+549,Paragorgia arborea
+550,Gersemia juliepackardae
+551,Terebellidae
+552,Delectopecten
+553,Amphipoda
+554,Amphipoda
+555,Asbestopluma
+556,Delectopecten
+557,Abyssocucumis abyssorum
+558,Sebastes
+559,Paragorgia arborea
+560,Paralomis multispina
+561,Gastropoda
+562,Terebellidae
+563,Actiniaria
+564,Abyssocucumis abyssorum
+565,Terebellidae
+566,Asbestopluma
+567,Abyssocucumis abyssorum
+568,Terebellidae
+569,Abyssocucumis abyssorum
+570,Keratoisis
+571,Amphipoda
+572,Asbestopluma
+573,Gastropoda
+574,Abyssocucumis abyssorum
+575,Actiniaria
+576,Amphipoda
+577,Actiniaria
+578,Heterocarpus
+579,Delectopecten
+580,Actiniaria
+581,Terebellidae
+582,Gastropoda
+583,Funiculina
+584,Porifera
+585,Gersemia juliepackardae
+586,Serpulidae
+587,Abyssocucumis abyssorum
+588,Abyssocucumis abyssorum
+589,Abyssocucumis abyssorum
+590,Abyssocucumis abyssorum
+591,Terebellidae
+592,Gastropoda
+593,Terebellidae
+594,Vesicomyidae
+595,Amphipoda
+596,Asbestopluma
+597,Asbestopluma
+598,Delectopecten
+599,Pyrosoma atlanticum
+600,Pandalus platyceros
+601,Chionoecetes tanneri
+602,Corallimorphus pilatus
+603,Peniagone
+604,Microstomus pacificus
+605,Paragorgia arborea
+606,Asbestopluma
+607,Asbestopluma
+608,Terebellidae
+609,Gersemia juliepackardae
+610,Asbestopluma
+611,Paragorgia arborea
+612,Paralomis multispina
+613,Paralomis multispina
+614,Abyssocucumis abyssorum
+615,Abyssocucumis abyssorum
+616,Paragorgia
+617,Paralomis multispina
+618,Pandalus platyceros
+619,Paralomis multispina
+620,Pandalus platyceros
+621,Gastropoda
+622,Paralomis multispina
+623,Strongylocentrotus fragilis
+624,Funiculina
+625,Brisingida
+626,Actiniaria
+627,Actiniaria
+628,Asbestopluma monticola
+629,Peniagone
+630,Psolus squamatus
+631,Keratoisis
+632,Funiculina
+633,Keratoisis
+634,Gersemia juliepackardae
+635,Funiculina
+636,Gastropoda
+637,Terebellidae
+638,Sebastes diploproa
+639,Asbestopluma
+640,Actiniaria
+641,Heteropolypus ritteri
+642,Heteropolypus ritteri
+643,Sebastolobus
+644,Asteroidea
+645,Abyssocucumis abyssorum
+646,Apostichopus leukothele
+647,Gastropoda
+648,Gastropoda
+649,Vesicomyidae
+650,Terebellidae
+651,Terebellidae
+652,Pyrosoma atlanticum
+653,Amphipoda
+654,Metridium farcimen
+655,Delectopecten
+656,Amphipoda
+657,Paralomis multispina
+658,Asbestopluma
+659,Terebellidae
+660,Terebellidae
+661,Pennatula phosphorea
+662,Asbestopluma
+663,Terebellidae
+664,Delectopecten
+665,Terebellidae
+666,Paragorgia arborea
+667,Pyrosoma atlanticum
+668,Psathyrometra fragilis
+669,Terebellidae
+670,Asbestopluma monticola
+671,Funiculina
+672,Acanthascinae
+673,Gastropoda
+674,Metridium farcimen
+675,Chionoecetes tanneri
+676,Abyssocucumis abyssorum
+677,Abyssocucumis abyssorum
+678,Abyssocucumis abyssorum
+679,Delectopecten
+680,Delectopecten
+681,Delectopecten
+682,Delectopecten
+683,Delectopecten
+684,Abyssocucumis abyssorum
+685,Terebellidae
+686,Delectopecten
+687,Delectopecten
+688,Delectopecten
+689,Delectopecten
+690,Actiniaria
+691,Acanthascinae
+692,Hippasteria
+693,Funiculina
+694,Amphipoda
+695,Actiniaria
+696,Strongylocentrotus fragilis
+697,Gastropoda
+698,Pyrosoma atlanticum
+699,Pyrosoma atlanticum
+700,Paralomis multispina
+701,Asbestopluma
+702,Terebellidae
+703,Gastropoda
+704,Abyssocucumis abyssorum
+705,Abyssocucumis abyssorum
+706,Abyssocucumis abyssorum
+707,Hippasteria
+708,Hippasteria
+709,Terebellidae
+710,Hippasteria
+711,Abyssocucumis abyssorum
+712,Gastropoda
+713,Hippasteria
+714,Strongylocentrotus fragilis
+715,Abyssocucumis abyssorum
+716,Keratoisis
+717,Asbestopluma
+718,Gersemia juliepackardae
+719,Amphipoda
+720,Amphipoda
+721,Asbestopluma
+722,Amphipoda
+723,Amphipoda
+724,Asbestopluma
+725,Amphipoda
+726,Funiculina
+727,Amphipoda
+728,Abyssocucumis abyssorum
+729,Actiniaria
+730,Abyssocucumis abyssorum
+731,Gersemia juliepackardae
+732,Delectopecten
+733,Holothuroidea
+734,Abyssocucumis abyssorum
+735,Abyssocucumis abyssorum
+736,Abyssocucumis abyssorum
+737,Amphipoda
+738,Asbestopluma monticola
+739,Vesicomyidae
+740,Delectopecten
+741,Actiniaria
+742,Terebellidae
+743,Delectopecten
+744,Delectopecten
+745,Asbestopluma monticola
+746,Porifera
+747,Abyssocucumis abyssorum
+748,Amphipoda
+749,Delectopecten
+750,Abyssocucumis abyssorum
+751,Gersemia juliepackardae
+752,Actinopterygii
+753,Terebellidae
+754,Funiculina
+755,Terebellidae
+756,Actiniaria
+757,Amphipoda
+758,Amphipoda
+759,Delectopecten
+760,Abyssocucumis abyssorum
+761,Abyssocucumis abyssorum
+762,Microstomus pacificus
+763,Actinernus
+764,Actiniaria
+765,Abyssocucumis abyssorum
+766,Hippasteria
+767,Terebellidae
+768,Abyssocucumis abyssorum
+769,Abyssocucumis abyssorum
+770,Keratoisis
+771,Asbestopluma
+772,Hippasteria
+773,Terebellidae
+774,Psolus squamatus
+775,Keratoisis
+776,Abyssocucumis abyssorum
+777,Terebellidae
+778,Abyssocucumis abyssorum
+779,Psolus squamatus
+780,Metridium farcimen
+781,Terebellidae
+782,Amphipoda
+783,Asbestopluma monticola
+784,Funiculina
+785,Pandalus platyceros
+786,Terebellidae
+787,Terebellidae
+788,Terebellidae
